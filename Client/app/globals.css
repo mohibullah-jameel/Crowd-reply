@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafafa;
+  --foreground: #1a1a2e;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --accent: #f97316;
+  --accent-hover: #ea580c;
+  
+  /* Platform colors */
+  --reddit: #ff4500;
+  --youtube: #ff0000;
+  --trustpilot: #00b67a;
+  
+  /* Status colors */
+  --status-draft: #9ca3af;
+  --status-assigned: #f59e0b;
+  --status-submitted: #8b5cf6;
+  --status-published: #10b981;
+  --status-cancelled: #ef4444;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f0f1a;
+    --foreground: #f1f5f9;
+    --card-bg: #1a1a2e;
+    --border: #2d2d44;
+    --muted: #94a3b8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+
+.transition-base {
+  transition: all 0.2s ease-in-out;
+}
